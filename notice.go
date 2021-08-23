@@ -8,8 +8,8 @@ import (
 )
 
 func PostNotice(msg string) {
-	var SendKey = os.Getenv("sckey")
-	fmt.println(SendKey)
+	var SendKey = os.Getenv("SCKEY")
+	fmt.Println(SendKey)
 	append := fmt.Sprintf("%s%s%s", SendKey, ".send?title=checkin_result&desp=", msg)
 	fmt.Println(append)
 	resp, err := http.Get("https://sctapi.ftqq.com/" + append)
