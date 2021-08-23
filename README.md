@@ -18,7 +18,7 @@
 
 某学校的基于 Github Action 完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选）
 
-感谢[原作者](https://github.com/azxj/jnu-stu-health-report) 提供的源代码。
+感谢 [原作者](https://github.com/azxj/jnu-stu-health-report) 提供的源代码。
 
 
 
