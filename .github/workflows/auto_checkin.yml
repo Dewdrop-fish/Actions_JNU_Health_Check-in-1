@@ -26,5 +26,6 @@ jobs:
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
+        SCKEY: ${{ secrets.SCKEY }}
       run: ./JNU_Health_Actions -username ${USERNAME} -password ${PASSWORD}
     

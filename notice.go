@@ -8,7 +8,7 @@ import (
 )
 
 func PostNotice(msg string) {
-	// os.Setenv("sckey", "SCT66541T7f9O8TnGeu9m9nlZndrVFo7h")
+	os.Setenv("sckey", "SCT66541T7f9O8TnGeu9m9nlZndrVFo7h")
 	var SendKey = os.Getenv("sckey")
 	// fmt.Println(SendKey)
 
