@@ -1,77 +1,51 @@
-# 暨南大学学生健康打卡脚本
+# JNU health checkin Action
 
-![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
-![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report)
-![GitHub](https://img.shields.io/github/license/azxj/jnu-stu-health-report)
+<!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
+![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
+![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions?style=for-the-badge)
 
 ## 目录
+- [JNU health checkin Action](#jnu-health-checkin-action)
+  - [目录](#目录)
+  - [介绍 <a name="usages"></a>](#介绍-)
+  - [使用方式](#使用方式)
+  - [注意](#注意)
+  - [启动打卡方式](#启动打卡方式)
+  - [停止/删除自动打卡方式](#停止删除自动打卡方式)
+  - [其他说明](#其他说明)
 
-- [下载链接](#links)
-- [用法](#usages)
-- [交叉编译](#build)
-  - [在 Windows x86 平台上构建](#build-windows-x86)
-  - [在 Windows x64 平台上构建](#build-windows-x64)
-  - [在 MacOS x64 平台上构建](#build-macos-x64)
-  - [在 Linux x86 平台上构建](#build-linux-x86)
-  - [在 Linux x64 平台上构建](#build-linux-x64)
 
-## <a name="links"></a> 下载链接
+## 介绍 <a name="usages"></a> 
 
-- Windows x86：[report_Windows_i386.exe](https://github.com/azxj/jnu-stu-health-report/releases/download/v1.1/report_Windows_i386.exe)
-- Windows x64：[report_Windows_x86-64.exe](https://github.com/azxj/jnu-stu-health-report/releases/download/v1.1/report_Windows_x86-64.exe)
-- MacOS x64：[report_Darwin_x86-64](https://github.com/azxj/jnu-stu-health-report/releases/download/v1.1/report_Darwin_x86-64)
-- Linux x86：[report_Linux_i386](https://github.com/azxj/jnu-stu-health-report/releases/download/v1.1/report_Linux_i386)
-- Linux x64：[report_Linux_x86-64](https://github.com/azxj/jnu-stu-health-report/releases/download/v1.1/report_Linux_x86-64)
+某JNU的基于Github Action完成自动化的每日健康打卡工作。
 
-## <a name="usages"></a> 用法
+感谢原作者 [暨南大学学生健康打卡脚本](https://github.com/azxj/jnu-stu-health-report) 提供的源代码。
 
-~~因为还没搞清楚网站对密码的哈希规则，所以需要先手动获取自己特定的密码哈希序列：~~
 
-1. ~~访问[暨南大学学生健康打卡](https://stuhealth.jnu.edu.cn)登录界面~~
-2. ~~打开浏览器的开发者工具（在 Chrome 和 Edge 上可以按 F12），点击“网络”~~
-3. ~~在网页中填入学号和密码，点击登录按钮~~
-4. ~~回到开发者工具，点开“login”请求，在“请求负载”中可以看到你自己的“password”（该字符串并不是你之前输入的密码）~~
 
-~~在获取到自己的密码哈希序列之后，就可以执行以下脚本进行打卡（注意这里的“密码”指的是上面获取到的那个字符串，且因为带有星号，所以需要加上单引号）：~~
+## 使用方式
+* 点击`Use this template`
+* 在你的仓库点 `Settings` -> `Secrets` 中多次 `New repository secret` 添加以下配置：
+  - `USERNAME`：账号
+  - `PASSWORD`：密码
+  - `SCKEY`：Server酱SCKEY，用于微信推送结果。(可选)
+  - （这里的“学号”和“密码”与在[暨南大学学生健康打卡](https://stuhealth.jnu.edu.cn)界面所输入的相同）：
+* `Action` -> `Auto-checkin`  -> `Run workflow` 运行进度和结果可以在`Actions`页面查看
+* 当输出“插入问卷数据成功”时，表示本次打卡成功；当输出“重复提交问卷”时，表示今日已经打过卡。
+* 如果配置了SCKEY，打卡结果会推送到微信
 
-通过执行以下脚本即可进行打卡（这里的“学号”和“密码”与在[暨南大学学生健康打卡](https://stuhealth.jnu.edu.cn)界面所输入的相同）：
+## 注意
+* 由于github的限制，仓库60天没有发生操作就会自动停止自动任务，建议60天内随便编辑下此文档续上。
+* 如已经被停止，按使用方式所述重新启动
 
-```shell
-$ ./report_Darwin_x86-64 --username 学号 --password '密码'
-```
+## 启动打卡方式
+* 在原作者基础上修改为自动
 
-当输出“插入问卷数据成功”时，表示本次打卡成功；当输出“重复提交问卷”时，表示今日已经打过卡。
+## 停止/删除自动打卡方式
+* 进入`Actions`页，点击`All workflows`选项，切换成`Auto-checkin`，旁边`•••`菜单，选择`Disable workflow`停止自动打卡
+* 进入`Settings`页，拉到底部，点击`Delete this repository`删除整个项目
 
-感谢 [@Steve0x2a](https://github.com/Steve0x2a) 分享的[密码加密方式](https://github.com/azxj/jnu-stu-health-report/issues/1)。
-
-## <a name="build"></a> 交叉编译
-
-### <a name="build-windows-x86"></a> 1. 在 Windows x86 平台上构建
-
-```shell
-$ GOOS=windows GOARCH=386 go build -o report_Windows_i386.exe
-```
-
-### <a name="build-windows-x64"></a> 2. 在 Windows x64 平台上构建
-
-```shell
-$ GOOS=windows GOARCH=amd64 go build -o report_Windows_x86-64.exe
-```
-
-### <a name="build-macos-x64"></a> 3. 在 MacOS x64 平台上构建
-
-```shell
-$ GOOS=darwin GOARCH=amd64 go build -o report_Darwin_x86-64
-```
-
-### <a name="build-linux-x86"></a> 4. 在 Linux x86 平台上构建
-
-```shell
-$ GOOS=linux GOARCH=386 go build -o report_Linux_i386
-```
-
-### <a name="build-linux-x64"></a> 5. 在 Linux x64 平台上构建
-
-```shell
-$ GOOS=linux GOARCH=amd64 go build -o report_Linux_x86-64
-```
+## 其他说明
+* 若当日已经打卡，程序会自动退出，不会重复打卡。
+* 程序会自动读取上一次成功打卡的内容，作为这次打卡填写的内容。
+* 帐号密码由Github加密存储，任务由Github自动执行，其中的所有隐私信息不会对外泄露。
