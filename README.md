@@ -3,6 +3,7 @@
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
 ![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions?style=for-the-badge)
+![GitHub](https://github.com/Sakaizd/Actions_JNU_Health_Check-in/actions/workflows/auto_checkin.yml/badge.svg)
 
 ## Contents
 - [JNU Health Checkin Action](#jnu-health-checkin-action)
