@@ -54,9 +54,9 @@ To prevent unnecessary workflow runs, scheduled workflows may be disabled automa
 * Go to `Settings` page，click`Delete this repository` to delete this repo
 
 ## Attention
-* If you have already clocked in on the same day, the program will automatically exit without repeating clocking in.
-* The program will automatically read the content of the last successful check-in as the content filled in this time.
-* The account password is encrypted and stored by Github, and the task is automatically executed by Github, and all private information in it will not be disclosed. 
+* If you have already check-in, the program inform you that `重复提交问卷`
+* The program will automatically fill the contents read from the last successful check-in.
+* The account and  password are encrypted and stored in Github. 
 
 ## Acknowledgments
  [Source code](https://github.com/azxj/jnu-stu-health-report) 
