@@ -42,15 +42,15 @@ This is an automated daily health check-in based on Github Action for JNU, the c
    - `USERNAME`: account
    - `PASSWORD`: Password
    - `SCKEY`: Server Chan SCKEY, used for WeChat push results. (Optional) [Server Chan](https://sct.ftqq.com/)
-   -(The "student ID" and "password" here are references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn)
+   - The "student ID" and "password" here should references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn)
 
 
 ## Tips
-* To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. You may change the readme file to keep the action running every 60 days.
+* To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. You may change the Readme.md file every 60 days prevent this.
 
 ## Stop/Delete
 * Go to `Actions` page，click `All workflows`->`Auto-checkin`->`•••`->`Disable workflow`
-*Go to `Settings` page，click`Delete this repository` to delete this repo
+* Go to `Settings` page，click`Delete this repository` to delete this repo
 
 ## Attention
 * If you have already clocked in on the same day, the program will automatically exit without repeating clocking in.
@@ -58,4 +58,7 @@ This is an automated daily health check-in based on Github Action for JNU, the c
 * The account password is encrypted and stored by Github, and the task is automatically executed by Github, and all private information in it will not be disclosed. 
 
 ## Acknowledgments
- [Oringinal code](https://github.com/azxj/jnu-stu-health-report) 
+ [Source code](https://github.com/azxj/jnu-stu-health-report) 
+ 
+ ## License
+[MIT](https://github.com/Sakaizd/Actions-LEDE/blob/main/LICENSE)
