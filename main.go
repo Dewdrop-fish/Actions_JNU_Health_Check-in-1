@@ -19,25 +19,7 @@ func main() {
 	firstID := List(jnuID)
 	mainTable, secondTable := Review(firstID, jnuID)
 	_, msg := Checkin(jnuID, mainTable, secondTable)
+	// msg := "重复提交问卷"
 	fmt.Println(msg)
-	PostNotice()
+	PostNotice(msg)
 }
-
-// func PostNotice() {
-// 	os.Setenv("sckey", "SCT66541T7f9O8TnGeu9m9nlZndrVFo7h")
-// 	var SendKey = os.Getenv("sckey")
-// 	// fmt.Println(SendKey)
-
-// 	msg := fmt.Sprintf("%s %s", SendKey, ".send?title=checkin_result&desp=success")
-// 	// fmt.Println(msg)
-// 	resp, err := http.Get("https://sctapi.ftqq.com/" + msg)
-// 	if err != nil {
-// 		// handle error
-// 	}
-// 	defer resp.Body.Close()
-// 	body, err := ioutil.ReadAll(resp.Body)
-// 	if err != nil {
-// 		// handle error
-// 	}
-// 	fmt.Println(string(body))
-// }
