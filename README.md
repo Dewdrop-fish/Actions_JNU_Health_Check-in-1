@@ -46,11 +46,11 @@ This is an automated daily health check-in based on Github Action for JNU, the c
 
 
 ## Tips
-* 由于github的限制，仓库60天没有发生操作就会自动停止自动任务，建议60天内随便编辑下此文档续上。
+* To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. You may change the readme file to keep the action running every 60 days.
 
 ## Stop/Delete
 * Go to `Actions` page，click `All workflows`->`Auto-checkin`->`•••`->`Disable workflow`
-* 进入`Settings`页，拉到底部，点击`Delete this repository`删除整个项目
+*Go to `Settings` page，click`Delete this repository` to delete this repo
 
 ## Attention
 * If you have already clocked in on the same day, the program will automatically exit without repeating clocking in.
