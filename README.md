@@ -54,7 +54,7 @@ To prevent unnecessary workflow runs, scheduled workflows may be disabled automa
 * Go to `Settings` page，click`Delete this repository` to delete this repo
 
 ## Attention
-* If you have already check-in, the program inform you that `重复提交问卷`
+* If you have already check-in, the actions results will inform you that the submittion was replicated.
 * The program will automatically fill the contents read from the last successful check-in.
 * The account and  password are encrypted and stored in Github. 
 
