@@ -1,11 +1,11 @@
-# JNU health checkin Action
+# JNU Health Checkin Action
 
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
 ![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions?style=for-the-badge)
 
 ## 目录
-- [JNU health checkin Action](#jnu-health-checkin-action)
+- [JNU Health Checkin Action](#jnu-health-checkin-action)
   - [目录](#目录)
   - [介绍 <a name="usages"></a>](#介绍-)
   - [使用方式](#使用方式)
@@ -34,7 +34,7 @@
 * 如果配置了 SCKEY，打卡结果会推送到微信
 
 ## 注意
-* 由于 github 的限制，仓库60天没有发生操作就会自动停止自动任务，建议60天内随便编辑下此文档续上。
+* 由于 Github 的限制，仓库60天没有发生操作就会自动停止自动任务，建议60天内随便编辑下此文档续上。
 * 如已经被停止，按使用方式所述重新启动
 
 
