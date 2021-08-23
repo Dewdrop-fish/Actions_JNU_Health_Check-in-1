@@ -1,4 +1,5 @@
-on: [push, pull_request]
+on: 
+  workflow_dispatch:
 env:
   TZ: Asia/Shanghai
 name: Auto_checkin
@@ -25,5 +26,5 @@ jobs:
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-      run: .\JNU_Health_Actions.exe -username ${USERNAME} -password ${PASSWORD}
+      run: .\JNU_Health_Actions -username ${USERNAME} -password ${PASSWORD}
     
