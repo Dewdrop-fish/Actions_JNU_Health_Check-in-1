@@ -1,11 +1,11 @@
-# JNU health checkin Action
+# JNU Health Checkin Action
 
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
 ![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions?style=for-the-badge)
 
 ## Contents
-- [JNU health checkin Action](#jnu-health-checkin-action)
+- [JNU Health Checkin Action](#jnu-health-checkin-action)
   - [Contents](#contents)
   - [Introduction](#introduction)
   - [Usage](#usage)
