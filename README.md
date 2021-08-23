@@ -4,45 +4,58 @@
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
 ![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions?style=for-the-badge)
 
-## 目录
+## Contents
 - [JNU health checkin Action](#jnu-health-checkin-action)
-  - [目录](#目录)
-  - [介绍 <a name="usages"></a>](#介绍-)
-  - [使用方式](#使用方式)
-  - [注意](#注意)
-  - [停止/删除自动打卡方式](#停止删除自动打卡方式)
-  - [其他说明](#其他说明)
+  - [Contents](#contents)
+  - [Introduction](#introduction)
+  - [Usage](#usage)
+  - [Tips](#tips)
+  - [Stop/Delete](#stopdelete)
+  - [Attention](#attention)
+  - [Acknowledgments](#acknowledgments)
 
 
-## 介绍 <a name="usages"></a> 
+## Introduction 
 
-某JNU的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选）
+<!-- 某JNU的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选） -->
 
-感谢原作者 [暨南大学学生健康打卡脚本](https://github.com/azxj/jnu-stu-health-report) 提供的源代码。
+This is an automated daily health check-in based on Github Action for JNU, the chekc-in time was set to 01:00 UTC.
+
+ The check-in result can be push to WeChat (optional) 
 
 
 
-## 使用方式
-* 点击`Use this template`
-* 在你的仓库点 `Settings` -> `Secrets` 中多次 `New repository secret` 添加以下配置：
+
+## Usage
+<!-- * 点击`Use this template`
+* 在你的仓库点击 `Settings` -> `Secrets` 中多次 `New repository secret` 添加以下配置：
   - `USERNAME`：账号
   - `PASSWORD`：密码
   - `SCKEY`：Server酱SCKEY，用于微信推送结果。(可选) [Server酱](https://sct.ftqq.com/)
   - （这里的“学号”和“密码”与在[暨南大学学生健康打卡](https://stuhealth.jnu.edu.cn)界面所输入的相同）：
 * 通过 `Action` -> `Auto-checkin`  -> `Run workflow` 运行一次即可实现每天自动打卡，运行进度和结果可以在`Actions`页面查看
 * 当输出“插入问卷数据成功”时，表示本次打卡成功；当输出“重复提交问卷”时，表示今日已经打过卡。
-* 如果配置了SCKEY，打卡结果会推送到微信
+* 如果配置了SCKEY，打卡结果会推送到微信 -->
 
-## 注意
+* Click the `Use this template` button to create a new repository.
+* In your repository, click `Settings` -> `Secrets` multiple times in `New repository secret` to add the following configuration:
+   - `USERNAME`: account
+   - `PASSWORD`: Password
+   - `SCKEY`: Server Chan SCKEY, used for WeChat push results. (Optional) [Server Chan](https://sct.ftqq.com/)
+   -(The "student ID" and "password" here are references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn)
+
+
+## Tips
 * 由于github的限制，仓库60天没有发生操作就会自动停止自动任务，建议60天内随便编辑下此文档续上。
-* 如已经被停止，按使用方式所述重新启动
 
-
-## 停止/删除自动打卡方式
-* 进入`Actions`页，点击`All workflows`选项，切换成`Auto-checkin`，旁边`•••`菜单，选择`Disable workflow`停止自动打卡
+## Stop/Delete
+* Go to `Actions` page，click `All workflows`->`Auto-checkin`->`•••`->`Disable workflow`
 * 进入`Settings`页，拉到底部，点击`Delete this repository`删除整个项目
 
-## 其他说明
-* 若当日已经打卡，程序会自动退出，不会重复打卡。
-* 程序会自动读取上一次成功打卡的内容，作为这次打卡填写的内容。
-* 帐号密码由Github加密存储，任务由Github自动执行，其中的所有隐私信息不会对外泄露。
+## Attention
+* If you have already clocked in on the same day, the program will automatically exit without repeating clocking in.
+* The program will automatically read the content of the last successful check-in as the content filled in this time.
+* The account password is encrypted and stored by Github, and the task is automatically executed by Github, and all private information in it will not be disclosed. 
+
+## Acknowledgments
+ [Oringinal code](https://github.com/azxj/jnu-stu-health-report) 
