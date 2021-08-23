@@ -1,2 +1,5 @@
-.vscode
+# Visual Studio 
+.vscode/
+
+#Built application files
 *.exe

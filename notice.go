@@ -19,11 +19,10 @@ func PostNotice() {
 	resp, err := http.Get("https://sctapi.ftqq.com/" + msg)
 	if err != nil {
 		// handle error
+		fmt.Println(err)
 	}
 	defer resp.Body.Close()
-	body, err := ioutil.ReadAll(resp.Body)
-	if err != nil {
-		// handle error
-	}
+	body, _ := ioutil.ReadAll(resp.Body)
+
 	fmt.Println(string(body))
 }
