@@ -17,7 +17,7 @@
 
 ## 介绍 <a name="usages"></a> 
 
-某JNU的基于Github Action完成自动化的每日健康打卡工作。
+某JNU的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选）
 
 感谢原作者 [暨南大学学生健康打卡脚本](https://github.com/azxj/jnu-stu-health-report) 提供的源代码。
 
@@ -28,7 +28,7 @@
 * 在你的仓库点 `Settings` -> `Secrets` 中多次 `New repository secret` 添加以下配置：
   - `USERNAME`：账号
   - `PASSWORD`：密码
-  - `SCKEY`：Server酱SCKEY，用于微信推送结果。(可选)
+  - `SCKEY`：Server酱SCKEY，用于微信推送结果。(可选) [Server酱](https://sct.ftqq.com/)
   - （这里的“学号”和“密码”与在[暨南大学学生健康打卡](https://stuhealth.jnu.edu.cn)界面所输入的相同）：
 * `Action` -> `Auto-checkin`  -> `Run workflow` 运行进度和结果可以在`Actions`页面查看
 * 当输出“插入问卷数据成功”时，表示本次打卡成功；当输出“重复提交问卷”时，表示今日已经打过卡。
