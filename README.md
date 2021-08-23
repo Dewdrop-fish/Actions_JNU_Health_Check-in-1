@@ -47,14 +47,14 @@ This is an automated daily health check-in based on Github Action for JNU, the c
 
 
 ## Tips
-To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. You may change the Readme.md file every 60 days prevent this.
+To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. You may change the Readme.md file every 60 days to prevent this.
 
 ## Stop/Delete
 * Go to `Actions` page，click `All workflows`->`Auto-checkin`->`•••`->`Disable workflow`
 * Go to `Settings` page，click`Delete this repository` to delete this repo
 
 ## Attention
-* If you have already check-in, the actions results will inform you that the submittion was replicated.
+* If you have already finish the check-in, the actions results will inform you that the submittion was replicated.
 * The program will automatically fill the contents read from the last successful check-in.
 * The account and  password are encrypted and stored in Github. 
 
