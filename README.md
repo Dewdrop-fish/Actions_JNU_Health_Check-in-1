@@ -1,4 +1,4 @@
-# JNU Health Checkin Action
+# Health Check-in Actions for JNU
 
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
