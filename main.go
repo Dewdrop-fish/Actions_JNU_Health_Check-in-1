@@ -6,8 +6,8 @@ import (
 )
 
 func main() {
-	username := os.Getenv("username")
-	password := os.Getenv("password")
+	username := os.Getenv("USERNAME")
+	password := os.Getenv("PASSWORD")
 	password = Encrypt(password)
 	jnuID := Login(username, password)
 	firstID := List(jnuID)
