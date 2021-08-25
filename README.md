@@ -1,8 +1,9 @@
-# JNU Health Checkin Action
+# Health Check-in Actions for JNU
 
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
-![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions?style=for-the-badge)
+![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions)
+![GitHub](https://github.com/Sakaizd/Actions_JNU_Health_Check-in/actions/workflows/auto_checkin.yml/badge.svg)
 
 ## Contents
 - [JNU Health Checkin Action](#jnu-health-checkin-action)
@@ -42,20 +43,23 @@ This is an automated daily health check-in based on Github Action for JNU, the c
    - `USERNAME`: account
    - `PASSWORD`: Password
    - `SCKEY`: Server Chan SCKEY, used for WeChat push results. (Optional) [Server Chan](https://sct.ftqq.com/)
-   -(The "student ID" and "password" here are references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn)
+   - The "student ID" and "password" here should references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn)
 
 
 ## Tips
-* 由于github的限制，仓库60天没有发生操作就会自动停止自动任务，建议60天内随便编辑下此文档续上。
+To prevent unnecessary workflow runs, scheduled workflows may be disabled automatically. When a public repository is forked, scheduled workflows are disabled by default. In a public repository, scheduled workflows are automatically disabled when no repository activity has occurred in 60 days. You may change the Readme.md file every 60 days to prevent this.
 
 ## Stop/Delete
 * Go to `Actions` page，click `All workflows`->`Auto-checkin`->`•••`->`Disable workflow`
-* 进入`Settings`页，拉到底部，点击`Delete this repository`删除整个项目
+* Go to `Settings` page，click`Delete this repository` to delete this repo
 
 ## Attention
-* If you have already clocked in on the same day, the program will automatically exit without repeating clocking in.
-* The program will automatically read the content of the last successful check-in as the content filled in this time.
-* The account password is encrypted and stored by Github, and the task is automatically executed by Github, and all private information in it will not be disclosed. 
+* If you have already finish the check-in, the actions results will inform you that the submittion was replicated.
+* The program will automatically fill the contents read from the last successful check-in.
+* The account and  password are encrypted and stored in Github. 
 
 ## Acknowledgments
- [Oringinal code](https://github.com/azxj/jnu-stu-health-report) 
+ [Source code](https://github.com/azxj/jnu-stu-health-report) 
+ 
+ ## License
+[MIT](https://github.com/Sakaizd/Actions-LEDE/blob/main/LICENSE)
