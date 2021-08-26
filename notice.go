@@ -4,21 +4,21 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"os"
+	"net/url"
 )
 
-func PostNotice(msg string) {
-	var SendKey = os.Getenv("SCKEY")
-	fmt.Println(SendKey)
-	append := fmt.Sprintf("%s%s%s", SendKey, ".send?title=checkin_result&desp=", msg)
-	fmt.Println(append)
-	resp, err := http.Get("https://sctapi.ftqq.com/" + append)
+func PostNotice(msg string, sckey string) {
+
+	data := url.Values{}
+	data.Add("title", "check-in_results")
+	data.Add("desp", msg)
+
+	resp, err := http.PostForm("https://sctapi.ftqq.com/"+sckey+".send", data)
 	if err != nil {
-		// handle error
-		fmt.Println(err)
+		println(err)
 	}
 	defer resp.Body.Close()
 	body, _ := ioutil.ReadAll(resp.Body)
-
 	fmt.Println(string(body))
+
 }
