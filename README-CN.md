@@ -19,17 +19,17 @@
 
 ## Introduction 
 
-<!-- 某JNU的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选） -->
+某JNU的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选）
 
-This is an automated daily health check-in based on Github Action for JNU, the chekc-in time was set to 01:00 UTC.
+<!-- This is an automated daily health check-in based on Github Action for JNU, the chekc-in time was set to 01:00 UTC.
 
- The check-in result can be push to WeChat (optional) 
+ The check-in result can be push to WeChat (optional)  -->
 
 
 
 
 ## Usage
-<!-- * 点击`Use this template`
+* 点击`Use this template`或`fork`本项目
 * 在你的仓库点击 `Settings` -> `Secrets` 中多次 `New repository secret` 添加以下配置：
   - `USERNAME`：账号
   - `PASSWORD`：密码
@@ -37,14 +37,14 @@ This is an automated daily health check-in based on Github Action for JNU, the c
   - （这里的“学号”和“密码”与在[暨南大学学生健康打卡](https://stuhealth.jnu.edu.cn)界面所输入的相同）：
 * 通过 `Action` -> `Auto-checkin`  -> `Run workflow` 运行一次即可实现每天自动打卡，运行进度和结果可以在`Actions`页面查看
 * 当输出“插入问卷数据成功”时，表示本次打卡成功；当输出“重复提交问卷”时，表示今日已经打过卡。
-* 如果配置了SCKEY，打卡结果会推送到微信 -->
+* 如果配置了SCKEY，打卡结果会推送到微信
 
-* Click the `Use this template` or `fork` button to create a your repository.
+<!-- * Click the `Use this template` button to create a new repository.
 * In your repository, click `Settings` -> `Secrets` multiple times in `New repository secret` to add the following configuration:
    - `USERNAME`: account
    - `PASSWORD`: Password
    - `SCKEY`: Server Chan SCKEY, used for WeChat push results. (Optional) [Server Chan](https://sct.ftqq.com/)
-   - The "student ID" and "password" here should references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn)
+   - The "student ID" and "password" here should references to the websites [Jinan University Student Health Check-in](https://stuhealth.jnu.edu.cn) -->
 
 
 ## Tips
