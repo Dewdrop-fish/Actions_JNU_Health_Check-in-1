@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 )
 
@@ -16,7 +15,7 @@ func main() {
 	mainTable, secondTable := Review(firstID, jnuID)
 	_, msg := Checkin(jnuID, mainTable, secondTable)
 
-	fmt.Println(msg)
+	// fmt.Println(msg)
 	if len(sckey) > 1 {
 		PostNotice(msg, sckey)
 	}

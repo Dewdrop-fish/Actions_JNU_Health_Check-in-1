@@ -1,5 +1,6 @@
 # Health Check-in Actions for JNU
 
+
 <!-- ![GitHub repo size](https://img.shields.io/github/repo-size/azxj/jnu-stu-health-report)
 ![GitHub last commit](https://img.shields.io/github/last-commit/azxj/jnu-stu-health-report) -->
 ![GitHub](https://img.shields.io/github/license/Sakaizd/JNU_Health_Actions)
@@ -19,7 +20,7 @@
 
 ## Introduction 
 
-某JNU的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选）
+适用于 JNU 的基于Github Action完成自动化的每日健康打卡工作，时间设置为 01:00 UTC，即每天早上9点。推送打卡结果到微信（可选）
 
 <!-- This is an automated daily health check-in based on Github Action for JNU, the chekc-in time was set to 01:00 UTC.
 
@@ -60,7 +61,7 @@ To prevent unnecessary workflow runs, scheduled workflows may be disabled automa
 * The account and  password are encrypted and stored in Github. 
 
 ## Acknowledgments
- [Source code](https://github.com/azxj/jnu-stu-health-report) 
+ [暨南大学学生健康打卡脚本](https://github.com/azxj/jnu-stu-health-report) 
  
  ## License
 [MIT](https://github.com/Sakaizd/Actions-LEDE/blob/main/LICENSE)
