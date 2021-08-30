@@ -1,8 +1,6 @@
 package main
 
 import (
-	"fmt"
-	"io/ioutil"
 	"net/http"
 	"net/url"
 )
@@ -24,8 +22,9 @@ func PostNotice(msg string, sckey string) {
 	if err != nil {
 		println(err)
 	}
-	defer resp.Body.Close()
-	body, _ := ioutil.ReadAll(resp.Body)
-	fmt.Println(string(body))
+	// defer
+	resp.Body.Close()
+	// ioutil.ReadAll(resp.Body)
+	// fmt.Println(string(body))
 
 }
